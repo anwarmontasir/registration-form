@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 
 class RegistrationForm extends Component {
+    handleSubmit(e) {
+        e.preventDefault();
+    } 
     render() {
         return (
-            <form className="registration">
+            <form className="registration" onSubmit={e => this.handleSubmit(e)}>
                 <h2>Register</h2>
                 <div className="registration__hint">* required field</div>
                 <div className="form-group">
